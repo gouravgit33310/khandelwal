@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khandelwal</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> 
+<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-3">
+  <a class="navbar-brand" href="#"><img src="images/logo.png" class="img-fluid" style="max-height: 50px;"></a>
+
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link active" href="/">Home</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/about.html">About</a>
+      </li>
+ <li class="nav-item">
+        <a class="nav-link" href="/success-story">Success story</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+ <section class="hero">
+        <h1>Find Your Perfect Match</h1>
+        <p>Trusted Matrimonial Website for Real and Verified Profiles</p>
+        <button>Create Profile</button>
+    </section>
+       <section class="find-partner">
+    <h1>Find Your Partner</h1>
+
+    <!-- Filter Form -->
+    <form id="filter-form">
+    <!-- Custom Age From -->
+    <div class="custom-select-wrapper">
+        <select id="age-from" name="age-from">
+            <option value="" disabled selected>Age From</option>
+        </select>
+    </div>
+
+    <!-- Custom Age To -->
+    <div class="custom-select-wrapper">
+        <select id="age-to" name="age-to">
+            <option value="" disabled selected>Age To</option>
+        </select>
+    </div>
+
+    <!-- Custom Gender -->
+    <div class="custom-select-wrapper">
+        <select id="search-gender" name="search-gender">
+            <option value="" disabled selected>Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+    </div>
+
+    <button type="button" onclick="filterProfiles()">Search</button>
+    
+</form>
+
+    <!-- Profiles Grid -->
+    <div class="profiles-container" id="profiles-container">
+        <div class="profile-card" data-name="Rahul" data-gender="male">
+            <img src="images/profile.jpg" alt="Rahul">
+            <h3>Rahul, 28</h3>
+            <p>Bangalore</p>
+        </div>
+        <div class="profile-card" data-name="Priya" data-gender="female">
+            <img src="images/gprofile.jpg" alt="Priya">
+            <h3>Priya, 25</h3>
+            <p>Mumbai</p>
+        </div>
+        <div class="profile-card" data-name="Amit" data-gender="male">
+            <img src="images/profile6.jpg" alt="Amit">
+            <h3>Amit, 30</h3>
+            <p>Delhi</p>
+        </div>
+        <div class="profile-card" data-name="Sanya" data-gender="female">
+            <img src="images/profile4.jpg" alt="Sanya">
+            <h3>Sanya, 27</h3>
+            <p>Pune</p>
+        </div>
+        <div class="profile-card" data-name="Rahul" data-gender="male">
+            <img src="images/profile5.jpg" alt="Rahul">
+            <h3>Rahul, 28</h3>
+            <p>Bangalore</p>
+        </div>
+        <div class="profile-card" data-name="Priya" data-gender="female">
+            <img src="images/profile.jpg" alt="Priya">
+            <h3>Priya, 25</h3>
+            <p>Mumbai</p>
+        </div>
+        <div class="profile-card" data-name="Amit" data-gender="male">
+            <img src="images/profile.jpg" alt="Amit">
+            <h3>Amit, 30</h3>
+            <p>Delhi</p>
+        </div>
+        <div class="profile-card" data-name="Sanya" data-gender="female">
+            <img src="images/profile4.jpg" alt="Sanya">
+            <h3>Sanya, 27</h3>
+            <p>Pune</p>
+        </div>
+        <!-- Add more profiles -->
+    </div>
+</section>
+<section class="success-slider">
+    <div class="container">
+
+        <h2 class="section-title">Success Stories</h2>
+        <p class="section-subtitle">Real couples who found love on our platform</p>
+
+        <!-- Swiper Main Wrapper -->
+        <div class="swiper mySuccessSwiper">
+            <div class="swiper-wrapper">
+
+                <!-- Slide 1 -->
+                <div class="swiper-slide story-card">
+                    <img src="images/couple1.png" alt="">
+                    <div class="story-content">
+                        <h3>Aman & Priya</h3>
+                        <p>"We matched here and got married. Forever grateful!"</p>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide story-card">
+                    <img src="images/couple1.png" alt="">
+                    <div class="story-content">
+                        <h3>Rajat & Neha</h3>
+                        <p>"Perfect match! Families were super happy."</p>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="swiper-slide story-card">
+                    <img src="images/couple1.png" alt="">
+                    <div class="story-content">
+                        <h3>Vikram & Anjali</h3>
+                        <p>"We connected instantly and tied the knot."</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Pagination + Navigation -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+    </div>
+</section>
+<section class="why-choose">
+    <div class="container">
+        <h2 class="section-title">Why Choose Us</h2>
+        <p class="section-subtitle">We make your partner search easier, faster & safer</p>
+
+        <div class="features-grid">
+
+            <!-- Feature 1 -->
+            <div class="feature-card">
+                <div class="icon">
+                    <i class="fa-solid fa-user-check"></i>
+                </div>
+                <h3>100% Verified Profiles</h3>
+                <p>All profiles are manually screened to ensure authenticity.</p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-card">
+                <div class="icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3>Safe & Secure</h3>
+                <p>Your personal details stay safe with our high-level security.</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-card">
+                <div class="icon">
+                    <i class="fa-solid fa-heart-circle-check"></i>
+                </div>
+                <h3>AI-Based Matching</h3>
+                <p>Smart matchmaking that understands your preferences.</p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="feature-card">
+                <div class="icon">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+                <h3>24/7 Support</h3>
+                <p>Always available to help you with anything you need.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="plans-section">
+    <div class="container">
+        <h2 class="section-title">Membership Plans</h2>
+        <p class="section-subtitle">Choose the plan that suits you best</p>
+
+        <div class="plans-grid">
+
+            <!-- Free Plan -->
+            <div class="plan-card">
+                <h3>Free</h3>
+                <p class="price">₹0<span>/month</span></p>
+                <ul>
+                    <li>Basic Profile View</li>
+                    <li>Limited Matches</li>
+                    <li>No Direct Contact</li>
+                </ul>
+                <a href="#" class="btn-plan">Get Started</a>
+            </div>
+
+            <!-- Premium Plan -->
+            <div class="plan-card featured">
+                <div class="tag">Popular</div>
+                <h3>Premium</h3>
+                <p class="price">₹499<span>/month</span></p>
+                <ul>
+                    <li>Unlimited Profile Views</li>
+                    <li>Send & Receive Messages</li>
+                    <li>Priority Support</li>
+                </ul>
+                <a href="#" class="btn-plan">Choose Premium</a>
+            </div>
+
+            <!-- Gold Plan -->
+            <div class="plan-card">
+                <h3>Gold</h3>
+                <p class="price">₹999<span>/month</span></p>
+                <ul>
+                    <li>Everything in Premium</li>
+                    <li>Profile Highlighting</li>
+                    <li>Top Search Ranking</li>
+                </ul>
+                <a href="#" class="btn-plan">Choose Gold</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h3 class="footer-logo">Khandelwal rishtey</h3>
+            <p>Your trusted platform to find your perfect life partner.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Profiles</a></li>
+                <li><a href="#">Success Stories</a></li>
+                <li><a href="#">Membership Plans</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Help</h4>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <p>Email: support@matrimony.com</p>
+            <p>Phone: +91 98765 43210</p>
+
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Matrimony. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+var swiper = new Swiper(".mySuccessSwiper", {
+    loop: true,
+    spaceBetween: 25,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    pagination: { el: ".swiper-pagination", clickable: true },
+    navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+
+    breakpoints: {
+        0: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 2 }
+    }
+});
+</script>
+</body>
+</html>
