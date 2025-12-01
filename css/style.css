@@ -614,5 +614,9 @@ textarea {
     .navbar-brand img {
         width : 220px;
     }
+    #filter-form {
+    margin: 26px;
+}
 
 }
+
