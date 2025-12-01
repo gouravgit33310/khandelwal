@@ -612,6 +612,7 @@ textarea {
         max-height: 40px;  /* smaller logo on phone */
     }
     .navbar-brand img {
-        width : 250px;
+        width : 220px;
     }
+
 }
